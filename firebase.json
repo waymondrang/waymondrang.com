@@ -1,0 +1,35 @@
+{
+    "hosting": {
+        "public": "public",
+        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+        "redirects": [
+            {
+                "source": "/docsafterdark/**",
+                "destination": "https://docsafterdark.com/",
+                "type": 301
+            },
+            {
+                "source": "/github",
+                "destination": "https://github.com/waymondrang",
+                "type": 301
+            },
+            {
+                "source": "/linkedin",
+                "destination": "https://www.linkedin.com/in/waymondrang/",
+                "type": 301
+            }
+        ],
+        "rewrites": [
+            {
+                "source": "/resume",
+                "destination": "/assets/Raymond J. Wang Resume.pdf"
+            }
+        ]
+    },
+    "emulators": {
+        "hosting": {
+            "host": "localhost",
+            "port": 5500
+        }
+    }
+}

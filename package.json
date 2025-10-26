@@ -1,0 +1,21 @@
+{
+    "name": "waymondrang.com",
+    "version": "1.0.0",
+    "description": "waymondrang.com",
+    "author": "waymondrang",
+    "license": "ISC",
+    "scripts": {
+        "format:check": "prettier --check .",
+        "format:fix": "prettier --write .",
+        "dev": "webpack --watch --mode development",
+        "build": "webpack --mode production",
+        "check": "npm run format:check"
+    },
+    "devDependencies": {
+        "prettier": "^3.6.2",
+        "ts-loader": "^9.5.4",
+        "typescript": "^5.9.3",
+        "webpack": "^5.102.1",
+        "webpack-cli": "^6.0.1"
+    }
+}

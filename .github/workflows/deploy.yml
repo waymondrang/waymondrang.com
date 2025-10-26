@@ -1,0 +1,40 @@
+name: deploy
+
+on:
+    push:
+        branches:
+            - release
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repository
+              uses: actions/checkout@v5
+
+            - name: setup node.js
+              uses: actions/setup-node@v5
+              with:
+                  node-version: 24
+
+            - name: print versions
+              run: |
+                  node -v
+                  npm -v
+
+            - name: install dependencies
+              run: npm ci
+
+            - name: run checks
+              run: npm run check
+
+            - name: run validation build
+              run: npm run build
+
+            - name: deploy to firebase
+              uses: FirebaseExtended/action-hosting-deploy@v0
+              with:
+                  repoToken: ${{ secrets.GITHUB_TOKEN }}
+                  firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+                  projectId: waymond
+                  channelId: live
