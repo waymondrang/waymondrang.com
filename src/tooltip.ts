@@ -83,6 +83,10 @@ function enableHoverTooltip() {
     }
 
     function updateTooltip(event: MouseEvent | Touch): void {
+        if (!targetElement) {
+            return;
+        }
+
         // note: need to get rect here because of dynamic width of text
         const tooltipRect = tooltip.getBoundingClientRect();
         const padding = 10;
@@ -179,7 +183,7 @@ function enableHoverTooltip() {
     });
 
     // subscribe to potential tooltip content changes
-    document.addEventListener("updatetooltip", (event: CustomEvent) => {
+    document.addEventListener("updatetooltip", () => {
         setTooltipText(targetElement);
     });
 }

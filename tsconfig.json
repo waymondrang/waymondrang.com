@@ -9,7 +9,8 @@
         "moduleResolution": "node",
         "lib": ["ES2015", "DOM"],
 
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "strictNullChecks": true
     },
-    "include": ["src", "lib/p5.js"]
+    "include": ["src"]
 }

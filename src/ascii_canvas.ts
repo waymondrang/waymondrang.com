@@ -76,17 +76,17 @@ class AsciiCanvas {
         }
 
         this.mainCanvas = document.createElement("canvas");
-        this.mainCtx = this.mainCanvas.getContext("2d");
+        this.mainCtx = this.mainCanvas.getContext("2d")!;
 
         this.mainCanvas.id = "mainCanvas";
         canvasContainer.appendChild(this.mainCanvas);
 
         this.sourceCanvas = document.createElement("canvas");
-        this.sourceCtx = this.sourceCanvas.getContext("2d");
+        this.sourceCtx = this.sourceCanvas.getContext("2d")!;
 
         // size of convert canvas should match source canvas in case text is 1x1 px
         this.convertCanvas = document.createElement("canvas");
-        this.convertCtx = this.convertCanvas.getContext("2d");
+        this.convertCtx = this.convertCanvas.getContext("2d")!;
 
         ////////////////////
         // SETUP RESIZING //
