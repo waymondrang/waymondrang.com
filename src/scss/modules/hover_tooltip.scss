@@ -1,0 +1,51 @@
+/*****************/
+/* HOVER TOOLTIP */
+/*****************/
+
+#hoverTooltip {
+    position: fixed;
+
+    opacity: 0;
+    visibility: hidden;
+
+    border: 1px solid var(--border-color-0);
+    background-color: var(--background-color-2);
+
+    z-index: 9999;
+    pointer-events: none;
+
+    div.content {
+        padding: 0.3rem 0.6rem;
+        white-space: nowrap;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+
+        color: var(--foreground-color-0);
+        font-family: var(--monospace-font-family-0);
+        font-size: var(--font-size--1);
+    }
+
+    div.rawContent {
+        white-space: nowrap;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.rawContent img.bioImage {
+        width: 13rem;
+    }
+
+    span.symbol {
+        font-size: var(--font-size-0);
+    }
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}

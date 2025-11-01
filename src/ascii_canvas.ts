@@ -177,7 +177,7 @@ class AsciiCanvas {
         /////////////
 
         const backgroundColor = getComputedStyle(document.documentElement)
-            .getPropertyValue("--font-color-2")
+            .getPropertyValue("--foreground-color-2")
             .trim();
 
         this.mainCtx.fillStyle = backgroundColor;

@@ -1,0 +1,241 @@
+@use "./modules/root.scss";
+@use "./modules/base.scss";
+@use "./modules/buttons.scss";
+
+@use "./modules/header.scss";
+@use "./modules/animated_name.scss";
+@use "./modules/project_card.scss";
+@use "./modules/email_table.scss";
+@use "./modules/footer.scss";
+@use "./modules/modal.scss";
+
+@use "./modules/hover_effect.scss";
+@use "./modules/hover_tooltip.scss";
+@use "./modules/hover_background.scss";
+
+// dark mode should go last
+@use "./modules/dark_mode.scss";
+
+///////////
+// ICONS //
+///////////
+
+.icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+/////////////////////
+// WIDTH CONTAINER //
+/////////////////////
+
+.widthContainer {
+    max-width: var(--max-width);
+    width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+/*************/
+/* HOVER TIP */
+/*************/
+
+span.hoverTip {
+    cursor: default;
+}
+
+/************/
+/* PROJECTS */
+/************/
+
+#projects .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 3rem;
+}
+
+/*******************/
+/* CONNECT SECTION */
+/*******************/
+
+#connect {
+    margin-top: 80px;
+    /* margin-bottom: 80px; */
+
+    .content {
+        padding-top: 40px;
+        padding-bottom: 60px;
+
+        border: 1px dashed var(--border-color-0);
+        border-right: none;
+        border-left: none;
+    }
+
+    h2 {
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    #connectGrid {
+        width: fit-content;
+
+        display: grid;
+        grid-template-columns: min-content min-content min-content;
+        grid-template-areas: "emails links resume";
+        gap: 2.5rem;
+    }
+}
+
+/**************/
+/* LINK GROUP */
+/**************/
+
+#connectLinks {
+    grid-area: links;
+
+    width: min-content;
+
+    border: 1px solid var(--border-color-0);
+    background-color: var(--background-color-2);
+
+    display: flex;
+    flex-direction: column;
+
+    & > a {
+        border-bottom: 1px solid var(--border-color-0);
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+/*****************/
+/* RESUME BUTTON */
+/*****************/
+
+#connectResume {
+    grid-area: resume;
+
+    border: 1px solid var(--border-color-0);
+}
+
+/**************/
+/* HOVER TEXT */
+/**************/
+
+.hoverText:hover {
+    color: var(--accent-color-0);
+}
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+// 1050px, 900px, 750px, 600px (150px difference)
+
+@media (max-width: 900px) {
+    .widthContainer {
+        padding: 0 1.5rem;
+    }
+
+    .projectCard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "title"
+            "short-description"
+            "long-description"
+            "links"
+            "image";
+
+        .projectTitle,
+        .projectShortDescription,
+        .projectLongDescription,
+        .projectLinks {
+            border-right: none;
+        }
+
+        .projectLongDescription,
+        .projectLinks {
+            border-bottom: 1px solid var(--border-color-0);
+        }
+
+        .projectImages {
+            height: auto;
+            max-height: 20rem;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    #connect {
+        #connectGrid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "emails links"
+                "resume resume";
+            // gap: 30px;
+        }
+    }
+}
+
+@media (max-width: 750) {
+    .widthContainer {
+        padding: 0 1.35rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .widthContainer {
+        padding: 0 1.2rem;
+    }
+
+    #name {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    #bio {
+        font-size: 1.35rem;
+    }
+
+    #connect {
+        #connectGrid {
+            width: auto;
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "emails emails"
+                "links resume";
+
+            // #emailTable {
+            //     width: 100%;
+            //     max-width: 30rem;
+            // }
+
+            #connectLinks {
+                flex-direction: row;
+
+                & > a {
+                    border-bottom: none;
+                    border-right: 1px solid var(--border-color-0);
+
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+
+            // #connectResume {
+            //     justify-self: end;
+            // }
+        }
+    }
+}

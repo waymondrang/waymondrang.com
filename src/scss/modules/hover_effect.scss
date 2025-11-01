@@ -1,0 +1,38 @@
+/****************/
+/* HOVER EFFECT */
+/****************/
+
+.hoverEffect {
+    text-decoration: none;
+    color: inherit;
+
+    position: relative;
+    z-index: 1;
+
+    margin-right: 1px;
+
+    &.underline {
+        text-decoration: underline;
+        text-decoration-style: dotted;
+    }
+
+    &:hover {
+        color: var(--background-color-0);
+        text-decoration: none;
+
+        &::after {
+            content: "";
+            position: absolute;
+
+            left: -4px;
+            right: -4px;
+            top: -2px;
+            bottom: -2px;
+
+            background: var(--accent-color-0);
+
+            z-index: -1;
+            pointer-events: none;
+        }
+    }
+}

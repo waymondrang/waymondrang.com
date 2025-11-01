@@ -1,0 +1,137 @@
+////////////
+// FOOTER //
+////////////
+
+footer {
+    margin-top: 3rem;
+    padding-bottom: 6rem;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    #controls {
+        position: relative;
+
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "logo buttons";
+
+        z-index: 99;
+    }
+
+    #logo {
+        grid-area: logo;
+
+        width: 6rem;
+        height: 6rem;
+
+        svg {
+            fill: var(--foreground-color-0);
+        }
+    }
+
+    /////////////////
+    // BUTTON GRID //
+    /////////////////
+
+    .buttonGrid {
+        grid-area: buttons;
+
+        height: min-content;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        box-sizing: border-box;
+
+        border: none;
+        border-top: 1px solid var(--border-color-0);
+
+        button,
+        a {
+            height: var(--button-size);
+            width: var(--button-size);
+            box-sizing: border-box;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: var(--background-color-2);
+
+            outline: none;
+            border: none;
+            border-right: 1px solid var(--border-color-0);
+            border-bottom: 1px solid var(--border-color-0);
+
+            cursor: pointer;
+        }
+
+        .empty {
+            width: var(--button-size);
+            height: var(--button-size);
+            box-sizing: border-box;
+
+            position: relative;
+
+            background: linear-gradient(
+                to bottom left,
+                var(--background-color-2) 50%,
+                transparent 50%
+            );
+
+            overflow: hidden;
+        }
+
+        & > *:first-child {
+            border-left: 1px solid var(--border-color-0);
+        }
+
+        & > * {
+            border-right: 1px solid var(--border-color-0);
+        }
+    }
+
+    //////////////////
+    // LINK COLUMNS //
+    //////////////////
+
+    #linkColumns {
+        grid-area: columns;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: var(--font-size-0);
+
+            color: var(--foreground-color-2);
+
+            & .columnTitle {
+                font-family: var(--monospace-font-family-0);
+                font-size: var(--font-size--2);
+
+                color: var(--foreground-color-8);
+                letter-spacing: -0.03rem;
+            }
+
+            & > a,
+            & > span {
+                width: min-content;
+                font-family: var(--serif-font-family-0);
+                font-size: var(--font-size--1);
+
+                text-decoration: none;
+                white-space: nowrap;
+
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+/***************/
+/* EMAIL TABLE */
+/***************/
+
+#emailTable {
+    grid-area: emails;
+
+    border-collapse: collapse;
+    width: min-content;
+
+    background-color: var(--background-color-1);
+    border: 1px solid var(--border-color-0);
+
+    tr {
+        border-bottom: 1px solid var(--border-color-0);
+        box-sizing: border-box;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    td {
+        padding: 0;
+        box-sizing: border-box;
+        vertical-align: middle;
+        border-right: 1px solid var(--border-color-0);
+
+        &:first-child {
+            width: 1px;
+            white-space: nowrap;
+        }
+
+        &:first-child a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        &:last-child {
+            font-family: var(--monospace-font-family-0);
+            font-size: var(--font-size--1);
+            font-weight: 400;
+
+            border-right: none;
+            text-align: start;
+
+            padding: var(--spacing-less) var(--spacing-more);
+        }
+    }
+}
