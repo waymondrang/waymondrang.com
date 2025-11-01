@@ -23,6 +23,10 @@
 .icon {
     width: var(--icon-size);
     height: var(--icon-size);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /////////////////////
