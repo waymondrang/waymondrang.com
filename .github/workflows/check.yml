@@ -26,4 +26,8 @@ jobs:
 
             - name: run checks
               run: |
-                  npm run format:check
+                  npm run check
+
+            - name: run validation build
+              run: |
+                  npm run build

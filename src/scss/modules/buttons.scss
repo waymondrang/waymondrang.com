@@ -1,0 +1,55 @@
+.squareButton,
+.flexButton,
+.fitButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+
+    font-weight: 450;
+    text-decoration: none;
+    color: inherit;
+
+    border: none;
+    outline: none;
+
+    background-color: var(--background-color-2);
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.squareButton {
+    width: var(--button-size);
+    height: var(--button-size);
+
+    .material-symbols-outlined,
+    .symbol {
+        // purposefully em
+        font-size: 1.8em;
+    }
+}
+
+.flexButton {
+    height: var(--button-size);
+    width: min-content;
+    box-sizing: border-box;
+
+    padding: var(--spacing-less) var(--spacing-more);
+}
+
+.fitButton {
+    height: var(--button-size);
+    box-sizing: border-box;
+
+    padding: var(--spacing-less) var(--spacing-more);
+}
+
+.flexButton,
+.fitButton {
+    .material-symbols-outlined,
+    .symbol {
+        // purposefully em
+        font-size: 1.4em;
+    }
+}

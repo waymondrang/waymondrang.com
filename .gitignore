@@ -75,6 +75,7 @@ node_modules/
 /dist
 /public/src
 
-# build files
-bundle.js
-*.bundle.js
+# bundled files
+bundle.*
+*.bundle.*
+**/bundle/*

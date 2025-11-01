@@ -28,7 +28,7 @@ jobs:
             - name: run checks
               run: npm run check
 
-            - name: run validation build
+            - name: run build
               run: npm run build
 
             - name: deploy to firebase

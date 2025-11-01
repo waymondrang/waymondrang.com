@@ -1,0 +1,102 @@
+/****************/
+/* PROJECT CARD */
+/****************/
+
+.projectCard {
+    overflow: hidden;
+    background-color: var(--background-color-1);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+        "title image"
+        "short-description image"
+        "long-description image"
+        "links image";
+
+    border: 1px solid var(--border-color-0);
+
+    .projectTitle {
+        grid-area: title;
+
+        padding: var(--spacing-more);
+        padding-bottom: var(--spacing-less);
+
+        border-bottom: 1px solid var(--border-color-0);
+        border-right: 1px solid var(--border-color-0);
+
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    // *
+    span.unreleased {
+        color: var(--foreground-color-6);
+    }
+
+    .projectLinks {
+        grid-area: links;
+
+        display: flex;
+        flex-direction: row;
+
+        border-right: 1px solid var(--border-color-0);
+
+        .squareButton {
+            border-right: 1px solid var(--border-color-0);
+        }
+    }
+
+    .projectShortDescription {
+        grid-area: short-description;
+
+        padding: var(--spacing-less) var(--spacing-more);
+
+        border-bottom: 1px solid var(--border-color-0);
+        border-right: 1px solid var(--border-color-0);
+    }
+
+    .projectShortDescription p,
+    .projectLongDescription p {
+        margin: 0;
+    }
+
+    .projectLongDescription {
+        grid-area: long-description;
+
+        padding: var(--spacing-more);
+        padding-top: var(--spacing-less);
+
+        border-right: 1px solid var(--border-color-0);
+        border-bottom: 1px solid var(--border-color-0);
+    }
+
+    .projectImages {
+        grid-area: image;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 0;
+        min-height: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+            &.containImage {
+                object-fit: contain;
+            }
+        }
+
+        &.chesster,
+        &.music {
+            background: #1b1b1b;
+        }
+    }
+}

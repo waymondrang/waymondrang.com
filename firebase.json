@@ -17,6 +17,16 @@
                 "source": "/linkedin",
                 "destination": "https://www.linkedin.com/in/waymondrang/",
                 "type": 301
+            },
+            {
+                "source": "/chess",
+                "destination": "https://chesster.waymondrang.com/",
+                "type": 301
+            },
+            {
+                "source": "/postboard",
+                "destination": "https://postboard.waymondrang.com/",
+                "type": 301
             }
         ],
         "rewrites": [

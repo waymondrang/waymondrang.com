@@ -15,9 +15,16 @@ const specialPropertyUnits: { [key: string]: string } = {
 
 function parseValue(value: string | number, property?: string): PropertyValue {
     const unit =
-        property in specialPropertyUnits
+        property && property in specialPropertyUnits
             ? specialPropertyUnits[property]
             : "px";
+
+    if (value == null || value === "none") {
+        return {
+            unit: unit,
+            value: 0,
+        };
+    }
 
     if (typeof value === "number") {
         const parsedValue: PropertyValue = {
@@ -48,6 +55,12 @@ function parseValue(value: string | number, property?: string): PropertyValue {
         };
 
         return parsedValue;
+    } else {
+        return {
+            unit: unit,
+            value: 0,
+        };
+        // throw new Error(`could not parse illegal value string: ${value}`);
     }
 }
 
@@ -95,7 +108,7 @@ function animate(
 
     // parse ending properties
     const endProperties: Record<string, PropertyValue> = {};
-    let transformProperties: TransformProperties | null = null;
+    let transformProperties: TransformProperties | undefined = undefined;
 
     for (const property in properties) {
         // handle special transform property

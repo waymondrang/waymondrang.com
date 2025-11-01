@@ -1,0 +1,59 @@
+/*****************/
+/* ANIMATED NAME */
+/*****************/
+
+#name {
+    position: relative;
+    user-select: none;
+
+    h1 {
+        font-family: var(--sans-serif-font-family);
+        font-size: 2.2rem;
+        font-weight: 600;
+
+        margin: 0;
+        padding: 0;
+        width: fit-content;
+    }
+
+    .hiddenTarget,
+    .replaceTarget {
+        position: absolute;
+        margin: 0;
+
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .animatedName,
+    .replaceTarget {
+        span {
+            display: inline-block;
+            position: relative;
+
+            transition: none;
+
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    // todo: set this up using js
+    .replaceTarget {
+        opacity: 1;
+    }
+
+    #replace0,
+    #replace1 {
+        position: relative;
+
+        visibility: visible;
+        opacity: 0;
+
+        z-index: 99;
+    }
+
+    #dotcom {
+        color: var(--foreground-color-6);
+    }
+}
