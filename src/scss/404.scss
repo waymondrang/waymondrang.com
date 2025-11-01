@@ -1,49 +1,57 @@
+@use "./modules/root.scss";
+
+@use "./modules/base.scss";
+@use "./modules/buttons.scss";
+
+@use "./modules/hover_effect.scss";
+@use "./modules/hover_tooltip.scss";
+@use "./modules/hover_background.scss";
+
+@use "./modules/dark_mode.scss";
+
 #actions {
     position: absolute;
 
-    top: 50px;
-    left: 50px;
+    top: 3.5rem;
+    left: 3.5rem;
 
     background-color: var(--background-color-1);
     border: 1px solid var(--border-color-0);
 
     display: flex;
     flex-direction: row;
-}
 
-#actions .message {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    .message {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-    font-weight: 500;
+        font-weight: 500;
 
-    padding: var(--spacing-less) var(--spacing-more);
+        padding: var(--spacing-less) var(--spacing-more);
 
-    border-right: 1px solid var(--border-color-0);
-}
-
-span.code {
-    font-family: var(--monospace-font-family-0);
+        border-right: 1px solid var(--border-color-0);
+    }
 }
 
 #asciiContainer {
-    width: 100vw;
+    display: flex;
+    flex: 1;
 
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     #actions {
-        top: 40px;
-        left: 40px;
+        top: 3rem;
+        left: 3rem;
     }
 }
 
 @media (max-width: 600px) {
     #actions {
-        top: 30px;
-        left: 30px;
+        top: 2.5rem;
+        left: 2.5rem;
     }
 }

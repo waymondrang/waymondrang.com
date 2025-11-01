@@ -8,9 +8,10 @@
         "format:check": "prettier --check .",
         "format:fix": "prettier --write .",
         "lint:check": "eslint src/",
-        "dev": "concurrently --names webpack,sass --prefix-colors green,blue 'webpack --watch --mode development' 'sass --watch src/scss/index.scss public/bundle/index.bundle.css'",
-        "build": "webpack --mode production && sass src/scss/index.scss public/bundle/index.bundle.css",
-        "check": "npm run format:check && npm run lint:check"
+        "dev": "concurrently --names webpack,'sass (index)','sass (404)' --prefix-colors green,blue 'webpack --watch --mode development' 'sass --watch src/scss/index.scss public/bundle/index.bundle.css' 'sass --watch src/scss/404.scss public/bundle/404.bundle.css'",
+        "build": "webpack --mode production && sass src/scss/index.scss public/bundle/index.bundle.css && sass src/scss/404.scss public/bundle/404.bundle.css",
+        "check": "npm run format:check && npm run lint:check",
+        "test": "npm run build && firebase emulators:start"
     },
     "devDependencies": {
         "@eslint/js": "^9.38.0",

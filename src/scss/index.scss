@@ -84,9 +84,9 @@ span.hoverTip {
     #connectGrid {
         width: fit-content;
 
-        display: grid;
-        grid-template-columns: min-content min-content min-content;
-        grid-template-areas: "emails links resume";
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 2.5rem;
     }
 }
@@ -137,9 +137,7 @@ span.hoverTip {
 /* MEDIA QUERIES */
 /*****************/
 
-// 1050px, 900px, 750px, 600px (150px difference)
-
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .widthContainer {
         padding: 0 1.5rem;
     }
@@ -173,19 +171,7 @@ span.hoverTip {
     }
 }
 
-@media (max-width: 850px) {
-    #connect {
-        #connectGrid {
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas:
-                "emails links"
-                "resume resume";
-            // gap: 30px;
-        }
-    }
-}
-
-@media (max-width: 750) {
+@media (max-width: 800) {
     .widthContainer {
         padding: 0 1.35rem;
     }
@@ -204,38 +190,5 @@ span.hoverTip {
 
     #bio {
         font-size: 1.35rem;
-    }
-
-    #connect {
-        #connectGrid {
-            width: auto;
-
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas:
-                "emails emails"
-                "links resume";
-
-            // #emailTable {
-            //     width: 100%;
-            //     max-width: 30rem;
-            // }
-
-            #connectLinks {
-                flex-direction: row;
-
-                & > a {
-                    border-bottom: none;
-                    border-right: 1px solid var(--border-color-0);
-
-                    &:last-child {
-                        border-right: none;
-                    }
-                }
-            }
-
-            // #connectResume {
-            //     justify-self: end;
-            // }
-        }
     }
 }
