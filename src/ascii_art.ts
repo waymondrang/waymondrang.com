@@ -9,7 +9,7 @@ class AsciiArt {
 
     constructor() {
         this.img = new Image();
-        this.img.src = "assets/img/logo gradient.png";
+        this.img.src = "/assets/img/logo gradient.png";
 
         this.startTime = performance.now();
         this.animationDuration = 30000;
