@@ -1,0 +1,68 @@
+$button_size: 4rem;
+
+button,
+.button {
+    color: inherit;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.25rem 0.5rem;
+
+    outline: none;
+    border: 1px solid var(--border-color-0);
+
+    background-color: var(--background-color-2);
+
+    text-decoration: none;
+
+    cursor: pointer;
+    user-select: none;
+
+    .symbol {
+        font-size: 1.5rem;
+        color: inherit;
+    }
+
+    &:hover:not(:disabled) {
+        border-color: var(--border-color-2);
+        background-color: var(--background-color-3);
+    }
+
+    &.active {
+        border-color: var(--border-color-4);
+        background-color: var(--background-color-6);
+    }
+
+    &.active:hover {
+        border-color: var(--border-color-6);
+        background-color: var(--background-color-8);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.squareButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+
+    height: $button_size;
+    width: $button_size;
+}
+
+.flexButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+
+    height: $button_size;
+    padding: 0 1.25rem;
+}

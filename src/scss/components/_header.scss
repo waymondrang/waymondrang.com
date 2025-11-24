@@ -1,0 +1,20 @@
+header {
+    min-height: min(max(50vh, 500px), 600px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .content {
+        max-width: 500px;
+
+        #bio {
+            p {
+                font-size: 1.25rem;
+                font-weight: 600;
+                letter-spacing: -0.05rem;
+                line-height: 1.375;
+            }
+        }
+    }
+}

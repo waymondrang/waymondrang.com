@@ -1,12 +1,12 @@
 function enableInfoModal(): void {
-    const modal = document.getElementById("infoModal") as HTMLElement;
+    const modal = document.getElementById("modal") as HTMLElement;
     const openButton = document.getElementById(
         "infoButton"
     ) as HTMLButtonElement;
     const closeButton = document.getElementById(
         "modalCloseButton"
     ) as HTMLButtonElement;
-    const backdrop = document.getElementById("modalBackdrop") as HTMLElement;
+    const backdrop = document.querySelector("#modal .backdrop") as HTMLElement;
 
     if (!modal || !openButton || !closeButton || !backdrop) {
         console.error("modal elements not found");

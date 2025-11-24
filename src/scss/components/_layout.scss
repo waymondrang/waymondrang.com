@@ -1,0 +1,44 @@
+@use "../base" as *;
+
+#everything {
+    width: 100%;
+    max-width: 900px;
+
+    padding: 0 4rem;
+
+    margin: 0 auto;
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#projects {
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+.sectionTitle {
+    margin: 0;
+    margin-bottom: 1.75rem;
+}
+
+@media (max-width: $MOBILE_LAYOUT_WIDTH) {
+    #everything {
+        padding: 0 1.25rem;
+        max-width: 600px;
+    }
+}
