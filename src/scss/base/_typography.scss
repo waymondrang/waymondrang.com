@@ -21,8 +21,12 @@ h2 {
 
 a {
     font-size: inherit;
-    color: var(--foreground-color-4);
+    color: var(--foreground-color-2);
     text-decoration-style: dotted;
+}
+
+a:hover {
+    color: var(--accent-color);
 }
 
 p {

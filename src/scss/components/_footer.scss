@@ -23,7 +23,7 @@ footer {
         height: 6rem;
 
         svg {
-            fill: var(--foreground-color-0);
+            fill: var(--accent-color);
         }
     }
 
@@ -43,7 +43,7 @@ footer {
             flex-direction: column;
             gap: 0.5rem;
 
-            color: var(--foreground-color-2);
+            color: var(--foreground-color-1);
 
             .columnTitle {
                 color: var(--foreground-color-8);

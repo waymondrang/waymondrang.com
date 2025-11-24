@@ -1,22 +1,24 @@
 @use "functions" as *;
 
+:root {
+    --sans-serif-font-family: "Manrope", Arial, Helvetica, sans-serif;
+    --monospace-font-family: "Google Sans Code", monospace;
+}
+
 ///////////////////////
 // LIGHT MODE COLORS //
 ///////////////////////
 
 $light_mode_accent-color: #0d47a1;
 
-$light_mode_background-color-start: #fff;
-$light_mode_background-color-end: #90caf9;
+$light_mode_background-color-start: #ffffff;
+$light_mode_background-color-end: #c3c3c3;
 
-$light_mode_foreground-a-color-start: #333333;
-$light_mode_foreground-a-color-end: #000000;
+$light_mode_foreground-a-color-start: #2d2d2d;
+$light_mode_foreground-a-color-end: #787878;
 
-$light_mode_foreground-b-color-start: #0d47a1;
-$light_mode_foreground-b-color-end: #fff;
-
-$light_mode_border-color-start: #bbdefb;
-$light_mode_border-color-end: #42a5f5;
+$light_mode_border-color-start: #d2d2d2;
+$light_mode_border-color-end: #b4b4b4;
 
 $light_mode_error-color-start: #b71c1c;
 $light_mode_error-color-end: #ffebee;
@@ -25,9 +27,6 @@ $light_mode_success-color-start: #33691e;
 $light_mode_success-color-end: #f1f8e9;
 
 :root {
-    --sans-serif-font-family: "Manrope", Arial, Helvetica, sans-serif;
-    --monospace-font-family: "Google Sans Code", monospace;
-
     //////////////////////
     // BACKGROUND COLOR //
     //////////////////////
@@ -48,16 +47,7 @@ $light_mode_success-color-end: #f1f8e9;
         "foreground-color",
         $light_mode_foreground-a-color-start,
         $light_mode_foreground-a-color-end,
-        4
-    );
-
-    // foreground-b
-    @include generate-color-properties(
-        "foreground-color",
-        $light_mode_foreground-b-color-start,
-        $light_mode_foreground-b-color-end,
-        10,
-        4
+        10
     );
 
     //////////////////
