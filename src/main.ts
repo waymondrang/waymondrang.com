@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (scrolledToTop()) {
         enableProjectsAnimation();
 
-        pause(300, () => {
+        pause(150, () => {
             animateProjects();
         });
     }

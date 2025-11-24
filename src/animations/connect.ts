@@ -10,7 +10,7 @@ function animateConnect(): void {
     if (connectHasAnimated) return;
     connectHasAnimated = true;
 
-    const connectGrid = document.getElementById("connectGrid") as HTMLElement;
+    const connectGrid = document.querySelector("#connect .grid") as HTMLElement;
     const connectChildren = connectGrid.children;
 
     Array.from(connectChildren).forEach((child, index) => {
@@ -58,7 +58,7 @@ function setupTrigger(): void {
 }
 
 function initAnimation(): void {
-    const connectGrid = document.getElementById("connectGrid") as HTMLElement;
+    const connectGrid = document.querySelector("#connect .grid") as HTMLElement;
     if (!connectGrid) return;
 
     // set initial opacity to 0

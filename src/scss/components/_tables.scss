@@ -1,0 +1,31 @@
+table {
+    border-collapse: collapse;
+    width: min-content;
+
+    background-color: var(--background-color-1);
+    border: 1px solid var(--border-color-0);
+
+    tr {
+        border-bottom: 1px solid var(--border-color-0);
+        box-sizing: border-box;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        td {
+            padding: 0;
+            box-sizing: border-box;
+            vertical-align: middle;
+
+            &:first-child {
+                width: 1px;
+                white-space: nowrap;
+            }
+
+            &:not(:last-child) {
+                border-right: 1px solid var(--border-color-0);
+            }
+        }
+    }
+}

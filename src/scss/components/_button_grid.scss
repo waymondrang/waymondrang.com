@@ -1,0 +1,42 @@
+.buttonGrid {
+    height: min-content;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    box-sizing: border-box;
+
+    border: none;
+    border-top: 1px solid var(--border-color-0);
+
+    button,
+    .button {
+        border: 1px solid var(--border-color-0);
+
+        border-left: none;
+        border-top: none;
+    }
+
+    .empty {
+        box-sizing: border-box;
+
+        position: relative;
+
+        background: linear-gradient(
+            to bottom left,
+            var(--background-color-2) 50%,
+            transparent 50%
+        );
+
+        overflow: hidden;
+    }
+
+    & > *:first-child {
+        border-left: 1px solid var(--border-color-0);
+    }
+
+    & > * {
+        border-right: 1px solid var(--border-color-0);
+    }
+}

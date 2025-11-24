@@ -1,0 +1,158 @@
+@use "functions" as *;
+
+///////////////////////
+// LIGHT MODE COLORS //
+///////////////////////
+
+$light_mode_accent-color: #0d47a1;
+
+$light_mode_background-color-start: #fff;
+$light_mode_background-color-end: #90caf9;
+
+$light_mode_foreground-a-color-start: #333333;
+$light_mode_foreground-a-color-end: #000000;
+
+$light_mode_foreground-b-color-start: #0d47a1;
+$light_mode_foreground-b-color-end: #fff;
+
+$light_mode_border-color-start: #bbdefb;
+$light_mode_border-color-end: #42a5f5;
+
+$light_mode_error-color-start: #b71c1c;
+$light_mode_error-color-end: #ffebee;
+
+$light_mode_success-color-start: #33691e;
+$light_mode_success-color-end: #f1f8e9;
+
+:root {
+    --sans-serif-font-family: "Manrope", Arial, Helvetica, sans-serif;
+    --monospace-font-family: "Google Sans Code", monospace;
+
+    //////////////////////
+    // BACKGROUND COLOR //
+    //////////////////////
+
+    @include generate-color-properties(
+        "background-color",
+        $light_mode_background-color-start,
+        $light_mode_background-color-end,
+        11
+    );
+
+    //////////////////////
+    // FOREGROUND COLOR //
+    //////////////////////
+
+    // foreground-a
+    @include generate-color-properties(
+        "foreground-color",
+        $light_mode_foreground-a-color-start,
+        $light_mode_foreground-a-color-end,
+        4
+    );
+
+    // foreground-b
+    @include generate-color-properties(
+        "foreground-color",
+        $light_mode_foreground-b-color-start,
+        $light_mode_foreground-b-color-end,
+        10,
+        4
+    );
+
+    //////////////////
+    // BORDER COLOR //
+    //////////////////
+
+    @include generate-color-properties(
+        "border-color",
+        $light_mode_border-color-start,
+        $light_mode_border-color-end,
+        4
+    );
+
+    /////////////////
+    // ERROR COLOR //
+    /////////////////
+
+    @include generate-color-properties(
+        "error-color",
+        $light_mode_error-color-start,
+        $light_mode_error-color-end,
+        15
+    );
+
+    ///////////////////
+    // SUCCESS COLOR //
+    ///////////////////
+
+    @include generate-color-properties(
+        "success-color",
+        $light_mode_success-color-start,
+        $light_mode_success-color-end,
+        15
+    );
+
+    //////////////////
+    // ACCENT COLOR //
+    //////////////////
+
+    --accent-color: #{$light_mode_accent-color};
+}
+
+//////////////////////
+// DARK MODE COLORS //
+//////////////////////
+
+$dark_mode_accent-color: #ff9100;
+
+$dark_mode_background-color-start: #0f0f0f;
+$dark_mode_background-color-end: #757575;
+
+$dark_mode_foreground-a-color-start: #ffffff;
+$dark_mode_foreground-a-color-end: #515151;
+
+$dark_mode_border-color-start: #424242;
+$dark_mode_border-color-end: #6b6b6b;
+
+html.dark {
+    //////////////////////
+    // BACKGROUND COLOR //
+    //////////////////////
+
+    @include generate-color-properties(
+        "background-color",
+        $dark_mode_background-color-start,
+        $dark_mode_background-color-end,
+        11
+    );
+
+    //////////////////////
+    // FOREGROUND COLOR //
+    //////////////////////
+
+    // foreground-a
+    @include generate-color-properties(
+        "foreground-color",
+        $dark_mode_foreground-a-color-start,
+        $dark_mode_foreground-a-color-end,
+        15
+    );
+
+    //////////////////
+    // BORDER COLOR //
+    //////////////////
+
+    @include generate-color-properties(
+        "border-color",
+        $dark_mode_border-color-start,
+        $dark_mode_border-color-end,
+        4
+    );
+
+    //////////////////
+    // ACCENT COLOR //
+    //////////////////
+
+    --accent-color: #{$dark_mode_accent-color};
+}

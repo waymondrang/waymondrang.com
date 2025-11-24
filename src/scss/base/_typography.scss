@@ -1,0 +1,55 @@
+body {
+    color: var(--foreground-color-0);
+
+    font-family: var(--sans-serif-font-family);
+    font-weight: 500;
+    font-optical-sizing: auto;
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+    letter-spacing: -0.05rem;
+}
+
+h2 {
+    font-size: 1.625rem;
+}
+
+a {
+    font-size: inherit;
+    color: var(--foreground-color-4);
+    text-decoration-style: dotted;
+}
+
+p {
+    line-height: 1.5;
+}
+
+pre {
+    margin: 1rem 0;
+}
+
+pre,
+code {
+    font-size: 0.8rem;
+    font-family: var(--monospace-font-family);
+}
+
+input,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+svg {
+    fill: var(--foreground-color-0);
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
