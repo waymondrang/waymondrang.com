@@ -5,6 +5,7 @@ import {
     animateProjects,
     enableProjectsAnimation,
 } from "./animations/projects";
+import { enableSkillsAnimation } from "./animations/skills";
 import { enableDarkModeButton } from "./dark_mode";
 import { enableInfoModal } from "./modal";
 import { pause } from "./motion";
@@ -14,6 +15,7 @@ import { scrolledToTop } from "./util";
 document.addEventListener("DOMContentLoaded", () => {
     // initialization functions for animations
     enableConnectAnimation();
+    enableSkillsAnimation();
     enableBioAnimation();
 
     pause(100, () => {
