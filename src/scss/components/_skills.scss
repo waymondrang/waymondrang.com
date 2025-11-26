@@ -74,9 +74,13 @@
 
         &.proficiency {
             border-radius: 0;
-            background-color: var(--background-color-3);
+            background-color: transparent;
             border: none;
             color: var(--accent-color);
+
+            .content {
+                padding: 0;
+            }
         }
 
         html.dark &.light {
