@@ -13,14 +13,14 @@ function enableProjectStack(): void {
         }
 
         const backProjectHideButton = backProject.querySelector(
-            "button[name=\'hide\']"
+            "button[name='hide']"
         ) as HTMLButtonElement;
         if (!backProjectHideButton) {
             console.log("back project has no hide button");
             return;
         }
 
-        backProject.addEventListener("mouseup", (event) => {
+        backProject.addEventListener("mouseup", () => {
             if (!element.classList.contains("stacked")) return;
 
             element.classList.remove("stacked");
