@@ -1,3 +1,5 @@
+@use "../base" as *;
+
 #modal {
     position: fixed;
     top: 0;
@@ -35,8 +37,8 @@
     }
 
     .container {
-        width: 100%;
-        max-width: 500px;
+        width: 600px;
+        max-width: 90vw;
 
         .content {
             position: relative;
@@ -49,6 +51,7 @@
 
             .main {
                 flex: 1;
+                min-width: 0;
 
                 border-right: 1px solid var(--border-color-0);
 
@@ -65,8 +68,11 @@
                 }
 
                 .details {
+                    overflow-x: auto;
+
                     table {
                         width: 100%;
+                        min-width: 350px;
 
                         border-collapse: collapse;
 
@@ -83,11 +89,21 @@
             }
 
             .actions {
+                flex-shrink: 0;
+
                 .button {
                     border: none;
                     border-bottom: 1px solid var(--border-color-0);
                 }
             }
+        }
+    }
+}
+
+@media (max-width: $MOBILE_LAYOUT_WIDTH) {
+    #modal {
+        .container {
+            padding: 0 1.25rem;
         }
     }
 }

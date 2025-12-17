@@ -9,6 +9,7 @@ import { enableSkillsAnimation } from "./animations/skills";
 import { enableDarkModeButton } from "./dark_mode";
 import { enableInfoModal } from "./modal";
 import { pause } from "./motion";
+import { enableProjectStack } from "./project_stack";
 import { enableHoverTooltip } from "./tooltip";
 import { scrolledToTop } from "./util";
 
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     enableConnectAnimation();
     enableSkillsAnimation();
     enableBioAnimation();
+    enableProjectStack();
 
     pause(100, () => {
         animateBio();
