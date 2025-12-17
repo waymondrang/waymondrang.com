@@ -1,0 +1,59 @@
+@use "../base" as *;
+
+.projectStack {
+    position: relative;
+
+    overflow: hidden;
+
+    &.stacked {
+        padding-bottom: 4rem;
+
+        .project.front {
+            position: relative;
+            z-index: 1;
+        }
+
+        .project.back {
+            position: absolute;
+            bottom: 0.5rem;
+            left: 0;
+
+            margin: 0 2rem;
+
+            opacity: 0.4;
+            z-index: 0;
+
+            transition: all 0.2s ease-out;
+        }
+
+        .project.back:hover {
+            margin: 0 1.5rem;
+            bottom: 0;
+
+            opacity: 0.75;
+            // top: 6rem;
+            cursor: pointer;
+        }
+    }
+
+    &:not(.stacked) {
+        display: flex;
+        flex-direction: column;
+
+        gap: 3rem;
+    }
+}
+
+@media (max-width: $MOBILE_LAYOUT_WIDTH) {
+    .projectStack {
+        &.stacked {
+            .project.back {
+                margin: 0 1.5rem;
+            }
+
+            .project.back:hover {
+                margin: 0 1rem;
+            }
+        }
+    }
+}
