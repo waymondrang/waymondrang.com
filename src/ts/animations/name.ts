@@ -1,4 +1,4 @@
-import { easeOutQuint } from "../easing";
+import { easeOutQuint } from "../easing_functions";
 import { animate, pause } from "../motion";
 
 // note: initialization is unnecessary because of how complicated the animation is

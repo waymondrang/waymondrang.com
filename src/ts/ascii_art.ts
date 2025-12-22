@@ -1,4 +1,4 @@
-import { easeInOutCubic } from "./easing";
+import { easeInOutCubic } from "./easing_functions";
 import { calculateProgress } from "./motion";
 
 class AsciiArt {

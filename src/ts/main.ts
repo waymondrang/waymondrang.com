@@ -10,7 +10,7 @@ import { enableDarkModeButton } from "./dark_mode";
 import { enableInfoModal } from "./modal";
 import { pause } from "./motion";
 import { enableProjectStack } from "./project_stack";
-import { enableHoverTooltip } from "./tooltip";
+import { enableHoverTooltip } from "./hover_tooltip";
 import { scrolledToTop } from "./util";
 
 document.addEventListener("DOMContentLoaded", () => {

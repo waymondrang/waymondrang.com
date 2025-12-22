@@ -1,6 +1,6 @@
 import { AsciiArt } from "./ascii_art";
 import { AsciiCanvas } from "./ascii_canvas";
-import { enableHoverTooltip } from "./tooltip";
+import { enableHoverTooltip } from "./hover_tooltip";
 
 document.addEventListener("DOMContentLoaded", () => {
     const asciiArt = new AsciiArt();

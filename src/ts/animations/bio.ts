@@ -1,4 +1,4 @@
-import { easeOutQuint } from "../easing";
+import { easeOutQuint } from "../easing_functions";
 import { animate } from "../motion";
 
 function animateBio(): void {

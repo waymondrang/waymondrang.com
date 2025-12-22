@@ -1,4 +1,4 @@
-import { easeOutExpo } from "../easing";
+import { easeOutExpo } from "../easing_functions";
 import { animate } from "../motion";
 
 function animateProjectStack() {
