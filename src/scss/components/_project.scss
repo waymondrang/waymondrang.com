@@ -40,6 +40,12 @@
                 .title {
                     padding-bottom: 0.75rem;
                     padding-left: 1rem;
+
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1rem;
+
+                    align-items: center;
                 }
 
                 .button {
@@ -94,6 +100,21 @@
             &:not(:last-child) {
                 border-bottom: 1px solid var(--border-color-0);
             }
+        }
+    }
+
+    // Project status
+    .status {
+        font-size: 0.75rem;
+
+        padding: 0.125rem 0.5rem;
+
+        border: 1px solid var(--border-color-0);
+        border-radius: 999px;
+
+        &.archived {
+            border-color: #bb800966;
+            background-color: #bb800926;
         }
     }
 
