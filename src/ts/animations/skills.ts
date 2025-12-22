@@ -1,4 +1,4 @@
-import { easeOutQuint } from "../easing";
+import { easeOutQuint } from "../easing_functions";
 import { animate, pause } from "../motion";
 
 const TRIGGER_THRESHOLD = 0.5; // percentage of visibility to trigger

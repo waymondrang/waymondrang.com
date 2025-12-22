@@ -2,9 +2,9 @@ const path = require("path");
 
 module.exports = {
     entry: {
-        main: "./src/main.ts",
-        initialize: "./src/initialize.ts",
-        404: "./src/404.ts",
+        main: "./src/ts/main.ts",
+        initialize_dark_mode: "./src/ts/initialize_dark_mode.ts",
+        404: "./src/ts/404.ts",
     },
     module: {
         rules: [
